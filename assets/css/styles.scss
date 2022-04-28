@@ -1,0 +1,1217 @@
+/* Scss Document */
+@font-face {
+  font-family: Poppins-Bold;
+  src: url("../fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: Poppins-Light;
+  src: url("../fonts/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: Poppins-Medium;
+  src: url("../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url("../fonts/Poppins-SemiBold.ttf");
+}
+
+$white: #ffffff;
+$black: #212121;
+$red: #d03030;
+
+$extra-larger-desktop-width: 1550px;
+$larger-desktop-width: 1200px;
+$smaller-desktop-width: 1024px;
+$tablet-width: 992px;
+$mobile-width: 768px;
+$phone-width: 640px;
+$small-phone-width: 480px;
+
+/*Media Queries*/
+@mixin ex-desktop {
+  @media (max-width: #{$extra-larger-desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin ex-desktop-min {
+  @media (min-width: #{$extra-larger-desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: #{$larger-desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin desktop-min {
+  @media (min-width: #{$larger-desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin s-desktop {
+  @media (max-width: #{$smaller-desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin s-desktop-min {
+  @media (min-width: #{$smaller-desktop-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet-min {
+  @media (min-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+}
+@mixin phone {
+  @media (max-width: #{$phone-width - 1px}) {
+    @content;
+  }
+}
+@mixin s-phone {
+  @media (max-width: #{$small-phone-width - 1px}) {
+    @content;
+  }
+}
+
+.font-16 {
+  font-size: 16px;
+}
+.font-18 {
+  font-size: 18px;
+}
+.font-24 {
+  font-size: 24px;
+}
+.font-26 {
+  font-size: 26px;
+}
+.font-36 {
+  font-size: 36px;
+}
+.font-40 {
+  font-size: 42px;
+}
+.font-42 {
+  font-size: 42px;
+}
+.font-46 {
+  font-size: 46px;
+}
+.font-56 {
+  font-size: 56px;
+}
+.font-70 {
+  font-size: 70px;
+}
+
+.white {
+  color: $white;
+}
+.white-bg {
+  background: $white;
+}
+.red {
+  color: $red;
+}
+.red-bg {
+  background: $red;
+}
+.black {
+  color: $black;
+}
+.black-bg {
+  background: $black;
+}
+.rel {
+  position: relative;
+}
+.abs {
+  position: absolute;
+}
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+.pad {
+  padding: 0px;
+}
+.mar {
+  margin: 0px;
+}
+
+.border-black {
+  border: 1px solid $black;
+}
+.border-white {
+  border: 1px solid $white;
+}
+
+.font-w-400 {
+  font-weight: 400;
+}
+.font-w-500 {
+  font-weight: 500;
+}
+.font-w-600 {
+  font-weight: 600;
+}
+.font-w-700 {
+  font-weight: 700;
+}
+.font-w-800 {
+  font-weight: 800;
+}
+.font-f-r {
+  font-family: Poppins-Regular;
+}
+.font-f-b {
+  font-family: Poppins-Bold;
+}
+.font-f-li {
+  font-family: Poppins-Light;
+}
+.font-f-m {
+  font-family: Poppins-Medium;
+}
+.font-f-sm {
+  font-family: Poppins-SemiBold;
+}
+
+body {
+  @extend .pad, .mar, .font-f-r, .white-bg;
+
+  h1 {
+    @extend .font-70, .font-f-sm, .black;
+    line-height: 72px;
+    @include ex-desktop {
+      font-size: 50px;
+      line-height: 50px;
+    }
+    @include s-desktop{
+      font-size: 37px;
+      line-height: 32px;
+    }
+    @include mobile{
+      font-size: 25px;
+    }
+  }
+
+  h2 {
+    @extend .font-56, .font-f-sm, .black;
+    @include ex-desktop {
+      font-size: 37px;
+    }
+    @include desktop{
+      font-size: 30px;
+    }
+  }
+  h3 {
+    @extend .font-46, .font-f-sm, .black;
+    @include ex-desktop {
+      font-size: 30px;
+    }
+  }
+  h4 {
+    @extend .font-42, .font-f-m, .black;
+    @include ex-desktop {
+      font-size: 28px;
+    }
+  }
+  h5 {
+    @extend .font-36, .font-f-m, .black;
+    @include ex-desktop {
+      font-size: 25px;
+      line-height: 25px;
+    }
+  }
+  h6 {
+    @extend .font-18, .font-f-li, .black;
+    line-height: 24px;
+    @include ex-desktop {
+      font-size: 15px;
+    }
+  }
+  p {
+    @extend .font-16, .font-f-r, .white;
+    line-height: 24px;
+  }
+}
+
+.nav-hero-img {
+  background-image: url("../images/banner\ img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 100%;
+  padding-bottom: 240px;
+  position: relative;
+
+
+  @include ex-desktop {
+    padding-bottom: 130px;
+  }
+  @include s-desktop {
+    padding-bottom: 58px;
+  }
+}
+.agency-navbar {
+  position: absolute;
+  width: 100%;
+
+  & img {
+    width: 300px;
+    @include ex-desktop {
+      width: 200px;
+    }
+    @include tablet {
+      width: 151px;
+    }
+  }
+  & .navbar-nav{
+    @include tablet{
+     background: #d03030;
+    padding-left: 23px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+  }
+  & .navbar-toggler:focus {
+    box-shadow: unset;
+  }
+  & .nav-item {
+    padding-right: 13px;
+    @include ex-desktop {
+      padding-right: 10px;
+    }
+  }
+  & .nav-item .nav-link {
+    @extend .font-16, .font-f-r, .font-w-400, .white;
+    @include ex-desktop {
+      font-size: 14px;
+    }
+    &:hover {
+      @extend .white;
+      // border-bottom: 1px solid white;
+    }
+  }
+  & .navbar-nav .nav-link.active {
+    @extend .font-16, .font-f-r, .font-w-400, .white;
+  
+    @include ex-desktop {
+      font-size: 14px;
+    }
+  }
+  & .home-bottom {
+    @extend .border-white;
+    width: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    @include s-desktop{
+      display: none;
+    }
+  }
+  & .mob-icon {
+    @extend .white;
+  }
+}
+.Hero-agency {
+  padding-top: 144px;
+  @include ex-desktop {
+    padding-top: 100px;
+  }
+  @include tablet {
+    padding-top: 72px;
+  }
+  & h5 {
+    @extend .white;
+    margin-top: 22px;
+  }
+  & h1 {
+    @extend .white;
+    margin-top: 10px;
+  }
+  & h6 {
+    @extend .white;
+    margin-top: 22px;
+  }
+  & .Globally {
+    @extend .red, .font-f-b;
+  }
+  & img {
+    width: 104px;
+    height: auto;
+    @include ex-desktop {
+      width: 70px;
+    }
+    @include tablet {
+      width: 60px;
+    }
+  }
+
+  & ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+  }
+  & input {
+    padding: 10px 69px;
+    background: transparent;
+    border: 1px solid white;
+    position: relative;
+    border-radius: 5px;
+    @include ex-desktop {
+      padding: 7px 69px;
+    }
+    @include s-desktop{
+      padding: 5px 18px;
+    }
+  }
+  & input::placeholder {
+    @extend .font-f-li, .white;
+    position: absolute;
+    left: 15px;
+
+    @include ex-desktop {
+      font-size: 14px;
+    }
+  }
+  & .btn-danger {
+    padding: 12px 10px;
+    margin-left: 20px;
+    font-size: 14px;
+    @include ex-desktop {
+      padding: 9px 10px;
+      margin-left: 15px;
+      font-size: 12px;
+    }
+    @include s-desktop{
+      padding: 8px 9px;
+    margin-left: 15px;
+    font-size: 11px;
+    }
+  }
+}
+
+.world {
+  & h6 {
+    @extend .black, .font-f-r;
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    position: relative;
+    &::after {
+      content: "";
+      background-image: linear-gradient(to right, #290533, #cb161b);
+      display: block;
+      height: 3px;
+      width: 191px;
+      position: absolute;
+      bottom: -16px;
+      left: 36%;
+      @include s-desktop{
+        left: 26%;
+      }
+    }
+
+    @include ex-desktop {
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+  & .safely {
+    @extend .red, .font-f-sm;
+  }
+  & h4 {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    @include ex-desktop {
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+  }
+  & .global-bg {
+    background-image: url("../images/global-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 881px;
+    @include ex-desktop {
+      height: 619px;
+    }
+    @include s-desktop{
+      height: 512px;
+    }
+    
+  }
+  & img {
+    width: 651px;
+    height: auto;
+    margin-top: 118px;
+    @include ex-desktop {
+      width: 365px;
+      height: auto;
+      margin-top: 83px;
+    }
+    @include s-desktop{
+      width: 329px;
+    }
+  }
+}
+.flight-classes {
+  & h3 {
+    @extend .font-f-b;
+  }
+  & h6 {
+    @extend .font-f-m;
+  }
+  & .flight-row {
+    --bs-gutter-x: 0px;
+  }
+  & .first-class {
+    @extend .red-bg;
+    width: 100%;
+    height: 826px;
+    position: relative;
+    @include ex-desktop {
+      height: 567px;
+    }
+    @include mobile{
+      height: 283px;
+    }
+    &:hover {
+      background: none;
+      background-image: url("../images/first\ class\ 1.png");
+      width: 100%;
+      height: 826px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 8px;
+      
+      @include ex-desktop {
+        height: 567px;
+      }
+      @include mobile{
+        height: 283px;
+      }
+    }
+    & .card-body {
+      position: absolute;
+      top: 50%;
+      left: 28%;
+      @include tablet{
+        top: 42%;
+      }
+      @include mobile{
+        top: 34%;
+      }
+
+    }
+    & .card-text {
+      @extend .white;
+    }
+  }
+  & .flight-row-card {
+    --bs-gutter-x: 0px;
+  }
+  & .premium {
+    background: rgba(59, 58, 58, 0.65);
+    opacity: 0.65;
+    width: 100%;
+    height: 413px;
+    @include ex-desktop {
+      height: 283px;
+    }
+    &:hover {
+      background-image: url("../images/premium economy 1.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 413px;
+      @include ex-desktop {
+        height: 283px;
+      }
+    }
+    & ul {
+      list-style: none;
+    }
+    & li {
+      @extend .white;
+      font-size: 24px;
+      @include ex-desktop {
+        font-size: 18px;
+      }
+    }
+  }
+  & .card-premium {
+    @extend .white;
+    text-align: center;
+    margin-top: 108px;
+    @include ex-desktop {
+      margin-top: 60px;
+    }
+  }
+  & .larger {
+    margin-left: 48px;
+    @include ex-desktop {
+      margin-left: 38px;
+    }
+    @include tablet{
+      margin-left: 29px;
+    }
+
+  }
+  & .bussness-class {
+    @extend .black-bg;
+    width: 100%;
+    height: 413px;
+    position: relative;
+    @include ex-desktop {
+      height: 283px;
+    }
+    &:hover {
+      background: none;
+      background-image: url("../images/bussniness-class.png");
+      width: 100%;
+      height: 413px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 8px;
+      @include ex-desktop {
+        height: 283px;
+      }
+    }
+    & .card-premium {
+      @extend .white;
+      text-align: center;
+      margin-top: 108px;
+    }
+    & .card-text {
+      @extend .white;
+    }
+  }
+  & .bussness-class2 {
+    @extend .black-bg;
+    width: 100%;
+    height: 413px;
+    position: relative;
+    @include ex-desktop {
+      height: 283px;
+    }
+    &:hover {
+      background: none;
+      background-image: url("../images/gamer-2 1.png");
+      width: 100%;
+      height: 413px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 8px;
+      @include ex-desktop {
+        height: 283px;
+      }
+    }
+    & .card-premium {
+      @extend .white;
+      text-align: center;
+      margin-top: 108px;
+    }
+    & .card-text {
+      @extend .white;
+    }
+  }
+  & .Economy-class2 {
+    @extend .red-bg;
+    width: 100%;
+    height: 413px;
+    position: relative;
+    @include ex-desktop {
+      height: 283px;
+    }
+    &:hover {
+      background: none;
+      background-image: url("../images/economy 1.png");
+      width: 100%;
+      height: 413px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 8px;
+      @include ex-desktop {
+        height: 283px;
+      }
+    }
+    & .card-premium {
+      @extend .white;
+      text-align: center;
+      margin-top: 108px;
+    }
+    & .card-text {
+      @extend .white;
+    }
+  }
+}
+// ......................................
+.video-started {
+  & .video-player {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  & video {
+    width: 100%;
+    height: 100%;
+    background: black;
+  }
+
+  & .volume-scrool {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    bottom: 6px;
+    background: linear-gradient(to bottom, transparent, #000);
+    align-items: center;
+    transition: opacity 0.2s;
+    padding-left: 66px;
+  }
+
+  & .video-player.playing .controls {
+    opacity: 0;
+  }
+
+  & .video-player:hover .controls {
+    opacity: 1;
+  }
+
+  & .control-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.2s;
+  }
+
+  & .control-button:hover {
+    opacity: 1;
+  }
+
+  & .control-button.play-button {
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    top: 40%;
+    left: 44%;
+    background: #d03030;
+    color: white;
+    border-radius: 50%;
+    @include s-desktop{
+      height: 50px;
+      width: 50px;
+      top: 30%;
+    
+    }
+  }
+
+  & .control-button.sound-button {
+    height: 40px;
+    width: 40px;
+  }
+
+  & .control-button.fullscreen-button {
+    height: 35px;
+    width: 35px;
+  }
+
+  & .control-button svg {
+    stroke: #fff;
+    fill: transparent;
+  }
+
+  & .timeline {
+    -webkit-appearance: none;
+    width: calc(100% - 125px);
+    height: 0.5em;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-size: 0% 100%;
+    background-image: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+  }
+
+  & .timeline::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.1s;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  & .timeline::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.1s;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  & .timeline::-ms-thumb {
+    -webkit-appearance: none;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.1s;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  & .timeline::-webkit-slider-thumb:hover {
+    background-color: #fff;
+  }
+
+  & .timeline:hover::-webkit-slider-thumb {
+    opacity: 1;
+  }
+
+  & .timeline::-moz-range-thumb:hover {
+    background-color: #fff;
+  }
+
+  & .timeline:hover::-moz-range-thumb {
+    opacity: 1;
+  }
+
+  & .timeline::-ms-thumb:hover {
+    background-color: #fff;
+  }
+
+  & .timeline:hover::-ms-thumb {
+    opacity: 1;
+  }
+
+  & .timeline::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+
+  & .timeline::-moz-range-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+
+  & .timeline::-ms-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+}
+
+.Our-exclusive {
+  @extend .black-bg;
+  padding-top: 65px;
+  padding-bottom: 100px;
+  margin-top: -10px;
+
+  & h2 {
+    @extend .white;
+    position: relative;
+    &::after {
+      content: "";
+      background-image: linear-gradient(to right, #290533, #cb161b);
+      display: block;
+      height: 3px;
+      width: 191px;
+      position: absolute;
+      top: 75px;
+      left: 0px;
+      @include ex-desktop {
+        top: 55px;
+      }
+      @include desktop{
+        top: 48px;
+      }
+    }
+  }
+  & .offers {
+    @extend .red;
+  }
+  & p {
+    margin-top: 40px;
+    @include s-desktop{
+      margin-top: 26px;
+    }
+  }
+  & .first-card {
+    background-image: url("../images/bussniesscard.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  & .bussnines-card {
+    background-image: url("../images/bussninesscard.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  @include mobile {
+    margin-top: 38px;
+  }
+  }
+  & .Economy-card {
+    background-image: url("../images/economanycard.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include tablet {
+      margin-top: 48px;
+    }
+    @include s-desktop{
+      margin-top: 38px;
+    }
+  }
+
+  & .card {
+    width: 100%;
+    width: 100%;
+    height: 512px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+    @include ex-desktop {
+      height: 427px;
+    }
+    @include s-desktop{
+      height: 364px;
+    }
+  }
+  & .card-body {
+    padding: 0px 22px;
+  }
+  & .card-title {
+    @extend .white, .font-f-sm;
+    font-size: 20px;
+    margin-top: 50%;
+    @include s-desktop{
+      margin-top: 34%;
+    }
+  }
+  & .card-text {
+    margin-top: 0px;
+  }
+
+  & .carousel-control-next {
+    @extend .red-bg;
+    bottom: 100%;
+    background-image: none !important;
+    opacity: 1;
+
+    height: 44px;
+    width: 44px;
+    border-radius: 7px;
+    top: -21px;
+    right: 30px;
+    &:hover {
+      @extend .white-bg;
+      color: red;
+    }
+  }
+  & .carousel-control-prev {
+    bottom: 100%;
+    right: 88px;
+    left: unset;
+    background: white;
+    height: 44px;
+    width: 44px;
+    border-radius: 7px;
+    opacity: 1;
+    top: -21px;
+    color: red;
+    &:hover {
+      background: red;
+      color: white;
+    }
+  }
+
+  & .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    height: 0px;
+    width: 0px;
+    height: 0px;
+    width: 0px;
+    position: relative;
+    top: -10px;
+    left: -7px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+  & .carousel-indicators {
+    bottom: -62px;
+  }
+  & .carousel-indicators [data-bs-target] {
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    opacity: unset;
+  }
+  & .carousel-indicators .active {
+    opacity: 1;
+    background-color: red;
+
+    border-radius: 50%;
+  }
+}
+.our-mission {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  @include s-desktop{
+    margin-top: 40px;
+  margin-bottom: 40px;
+  }
+  & h3 {
+    @extend .font-f-m, .black;
+    font-size: 40px;
+    position: relative;
+    @include ex-desktop {
+      font-size: 32px;
+    }
+    @include tablet {
+      margin-top: 38px;
+    }
+    &::after {
+      content: "";
+      background-image: linear-gradient(to right, #290533, #cb161b);
+      display: block;
+      height: 3px;
+      width: 191px;
+      position: absolute;
+      top: 60px;
+      left: 0px;
+      @include ex-desktop {
+        top: 40px;
+      }
+    }
+  }
+  & p {
+    @extend .black, .font-f-m;
+    margin-top: 40px;
+    @include ex-desktop {
+      margin-top: 25px;
+    }
+  }
+  & .vison {
+    margin-top: 80px;
+    @include tablet {
+      margin-top: 30px;
+    }
+  }
+  & .women-tablet {
+    @include tablet {
+      display: none;
+    }
+  }
+  & .women-large {
+    @include tablet-min {
+      display: none;
+    }
+  }
+}
+.introducing {
+  & h2 {
+    position: relative;
+    &::after {
+      content: "";
+      background-image: linear-gradient(to right, #290533, #cb161b);
+      display: block;
+      height: 3px;
+      width: 191px;
+      position: absolute;
+      bottom: -16px;
+      left: 44%;
+      @include ex-desktop {
+        left: 40%;
+      }
+      @include desktop {
+        left: 36%;
+      }
+      @include mobile{
+        left: 28%;
+      }
+    }
+  }
+  & p {
+    @extend .black;
+    text-align: center;
+    margin-top: 21px;
+  }
+}
+// footer css
+.footer-agency{
+  background-image: url("../images/footerbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 519px;
+  @include ex-desktop{
+    height: 470px;
+  }
+  @include mobile{
+    height: 557px;
+  }
+  @include s-desktop{
+   margin-top: -100px;
+  }
+
+  & .agency-ft-top{
+    padding-top: 224px;
+  @include mobile{
+    padding-top: 243px;
+  
+  }
+  }
+  & img {
+    width: 314px;
+    height: auto;
+    @include ex-desktop{
+      width: 219px
+    }
+    
+  }
+  & .logo-ft-ul{
+    & ul {
+      list-style: none;
+      display: flex;
+      padding-left: 0;
+      margin-top: 27px;
+      @include mobile{
+        padding-left: 20px;
+      }
+    }
+    & input {
+      padding: 10px 69px;
+      background: transparent;
+      border: 1px solid white;
+      position: relative;
+      border-radius: 5px;
+      @include ex-desktop {
+        padding: 7px 69px;
+      }
+      @include s-desktop{
+        padding: 5px 18px;
+      }
+    }
+    & input::placeholder {
+      @extend .font-f-li, .white;
+      position: absolute;
+      left: 15px;
+  
+      @include ex-desktop {
+        font-size: 14px;
+      }
+    }
+    & .btn-danger {
+      padding: 12px 10px;
+      margin-left: 20px;
+      font-size: 14px;
+      @include ex-desktop {
+        padding: 9px 10px;
+        margin-left: 15px;
+        font-size: 12px;
+      }
+      @include s-desktop{
+        padding: 8px 9px;
+      margin-left: 15px;
+      font-size: 11px;
+      }
+    }
+  }
+ 
+  & .contact-ft-top{
+    margin-top: 100px;
+  }
+  & .btn-contact{
+    @extend .font-18, .font-f-m, .white;
+    
+    cursor: pointer;
+
+  }
+  & .btn-Career {
+    @extend .font-18, .font-f-m, .white;
+    margin-top: 20px;
+    cursor: pointer;
+    @include ex-desktop{
+      margin-top: 0px;
+    }
+  }
+  & .contact-ft-ul{
+    margin-top: 100px;
+    @include ex-desktop{
+      margin-top: 73px;
+    }
+    @include mobile{
+      margin-top: 0px;
+    }
+    & ul{
+      list-style: none;
+    }
+  }
+  & .footer-icons{
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+    & li {
+      @extend .white;
+      font-size: 21px;
+      padding-right: 15px;
+      cursor: pointer;
+      
+    }
+  }
+  & .footer-bottom{
+    border-bottom: 1px solid white;
+  }
+  & p {
+    margin-top: 20px;
+    @include mobile{
+      text-align: center;
+    }
+  }
+  & .footer-holi {
+    float: right;
+    @include mobile{
+     float:unset;
+    }
+
+  }
+}
+// footer ended
+
+
+ 
